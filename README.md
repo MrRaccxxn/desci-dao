@@ -1,5 +1,5 @@
-<!-- Designed for nanoGiants 12.2022 hackathon -->
-  <h1 align="center">AppName</h1>
+<!-- Designed by Sandra Ashipala 02.01.2023 https://github.com/sandramsc -->
+  <h1 align="center">SoulsSci</h1>
 
 ## Application Description
 
@@ -8,7 +8,7 @@ short app description
 ## Table of Contents
 
 <details>
-<summary>AppName</summary>
+<summary>SoulSci</summary>
 
 - [Application Description](#application-description)
 - [Table of Contents](#table-of-contents)
