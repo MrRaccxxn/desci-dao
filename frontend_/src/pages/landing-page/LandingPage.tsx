@@ -1,6 +1,6 @@
 /*Designed by Sandra Ashipala 28.01.2023 for FVM Hackathon https://linkedin.com/in/sandraashipala */
-//import React from 'react'
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 import { useState, useEffect } from 'react';
 import { SelectedPage } from './types/types';
 
@@ -11,7 +11,7 @@ function LandingPage() {
     const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
     useEffect(() => {
       const handleScroll = () => {
-        if (window.scrollY ===0){
+        if (window.scrollY === 0){
           setIsTopOfPage(true);
           setSelectedPage(SelectedPage.Home);
         }
@@ -25,6 +25,9 @@ function LandingPage() {
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
+      <Hero 
         setSelectedPage={setSelectedPage}
       />
     </div>
