@@ -53,7 +53,7 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                                 setSelectedPage={setSelectedPage}
                             />
                         </div>
-                        <div>
+                        <div className={`${flexBetween} gap-8`}>
                         <p>My Dashboard</p>
                         <ActionBTN setSelectedPage={setSelectedPage} >Connect Wallet</ActionBTN>
                         </div>
@@ -68,6 +68,48 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                 </div>
             </div>
         </div>
+        {/*MOBILE MENU MODAL*/}
+        {!isAboveMediumScreens && isMenuToggled && (
+            <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-secondaryColor_orange drop-shadow-xl">
+                {/*CLOSE ICON*/}
+                <div className="flex justify-end p-12">
+                    <button  onClick={()=> setIsMenuToggled(!isMenuToggled)}>
+                        <XMarkIcon className="h-6 w-6 text-primaryColor"/>
+                    </button>
+                </div>
+                {/*MENU ITEMS*/}
+                <div className="ml-[33%] flex flex-col gap-10 text-2xl ">
+                            <Link page ="Home" 
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            <Link page ="About Us" 
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            <Link page ="Upload Paper" 
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            <Link page ="Features" 
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            <Link page ="FQA" 
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            <Link page ="Grants" 
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                            <Link page ="Contact Us" 
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                            />
+                        </div>
+            </div>
+        )}
     </nav>)
 }
 
