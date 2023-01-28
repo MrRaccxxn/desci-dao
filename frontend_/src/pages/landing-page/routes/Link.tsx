@@ -1,3 +1,4 @@
+/*Designed by Sandra Ashipala 28.01.2023 for FVM Hackathon https://linkedin.com/in/sandraashipala */
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { SelectedPage } from '../types/types'
 type Props = {

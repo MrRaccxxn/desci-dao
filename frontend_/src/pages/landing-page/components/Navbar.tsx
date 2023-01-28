@@ -1,10 +1,12 @@
+/*Designed by Sandra Ashipala 28.01.2023 for FVM Hackathon https://linkedin.com/in/sandraashipala */
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import Logo from '../../../assets/logo.png';
 import Link from '../routes/Link';
 import { SelectedPage } from '../types/types';
 import useMediaQuery from '@/hooks/useMediaQuery';
-import  ActionBTN from '../types/ActionBTN'
+import  ActionBTN from '../types/ActionBTN';
+import  ActionBTN2 from '../types/ActionBTN2';
 
 type Props = {
     selectedPage: SelectedPage;
@@ -53,8 +55,8 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                                 setSelectedPage={setSelectedPage}
                             />
                         </div>
-                        <div className={`${flexBetween} gap-8`}>
-                        <p>My Dashboard</p>
+                        <div className={`${flexBetween} gap-4`}>
+                        <ActionBTN2 setSelectedPage={setSelectedPage} >My Dashboard</ActionBTN2>
                         <ActionBTN setSelectedPage={setSelectedPage} >Connect Wallet</ActionBTN>
                         </div>
                     </div>
@@ -74,7 +76,7 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                 {/*CLOSE ICON*/}
                 <div className="flex justify-end p-12">
                     <button  onClick={()=> setIsMenuToggled(!isMenuToggled)}>
-                        <XMarkIcon className="h-6 w-6 text-primaryColor"/>
+                        <XMarkIcon className="h-6 w-6 text-primaryColor hover:text-secondaryColor_green"/>
                     </button>
                 </div>
                 {/*MENU ITEMS*/}

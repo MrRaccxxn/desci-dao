@@ -6,10 +6,10 @@ module.exports = {
     colors: {
       white: 'white',
       black: '#000',
+      blue: "#04d9ff",
       primaryColor: "#00040f",
       secondaryColor: "#00f6ff",
       dimWhite: "rgba(255, 255, 255, 0.7)",
-      dimBlue: "rgba(9, 151, 124, 0.1)",
       secondaryColor_green: '#c2f70f',
       secondaryColor_orange: '#fe7a15',
     },

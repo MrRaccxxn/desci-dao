@@ -6,10 +6,10 @@ type Props = {
     setSelectedPage: (value: SelectedPage) => void;
 }
 
-const ActionBTN = ({children, setSelectedPage}: Props)=> {
+const ActionBTN2 = ({children, setSelectedPage}: Props)=> {
     return(
         <AnchorLink
-            className="rounded-md bg-secondaryColor_green font-bold px-6 py-2 hover:bg-yellow-400 hover:text-green-400"
+            className="rounded-md bg-yellow-400 font-bold px-6 py-2 hover:bg-primaryColor_green hover:text-green-400"
             onClick={() => setSelectedPage(SelectedPage.ContactUs)}
             href={`#${SelectedPage.ContactUs}`}
         >
@@ -18,4 +18,4 @@ const ActionBTN = ({children, setSelectedPage}: Props)=> {
     )
 }
 
-export default ActionBTN;
+export default ActionBTN2;
