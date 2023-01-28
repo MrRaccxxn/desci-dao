@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GetStarted = () => {
+const TrySoulSci = () => {
 
 return(
     <div className="flex justify-center items-center w-[140px] h-[140px] rounded-full bg-green-gradient p-[2px] cursor-pointer">
@@ -23,4 +23,4 @@ return(
 )
 };
 
-export default GetStarted;
+export default TrySoulSci;
