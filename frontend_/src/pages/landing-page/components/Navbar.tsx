@@ -9,17 +9,19 @@ import  ActionBTN from '../types/ActionBTN';
 import  ActionBTN2 from '../types/ActionBTN2';
 
 type Props = {
+    isTopOfPage: boolean;
     selectedPage: SelectedPage;
     setSelectedPage: (value: SelectedPage) => void;
 }
 
-const Navbar = ({selectedPage, setSelectedPage}: Props) => {
+const Navbar = ({selectedPage, isTopOfPage, setSelectedPage}: Props) => {
     const flexBetween = "flex items-center justify-between";
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
+    const navbarBackground = isTopOfPage ? "" : "bg-primaryColor_orange drop-shadow"
   return(  <nav>
        <div className={`${flexBetween} bg-secondaryColor_orange fixed top-0 z-30 w-full py-3`}>
-            <div className={`${flexBetween} mx-auto w-5/6`}>
+            <div className={`${navbarBackground} ${flexBetween} mx-auto w-5/6`}>
                 <div className={`${flexBetween} w-full gap-16`}>
                     {/*LEFT SIDE*/}
                     <img alt="logo" src={Logo} />
@@ -72,7 +74,7 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
         </div>
         {/*MOBILE MENU MODAL*/}
         {!isAboveMediumScreens && isMenuToggled && (
-            <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-secondaryColor_orange drop-shadow-xl">
+            <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primaryColor_orange drop-shadow-xl">
                 {/*CLOSE ICON*/}
                 <div className="flex justify-end p-12">
                     <button  onClick={()=> setIsMenuToggled(!isMenuToggled)}>

@@ -9,8 +9,8 @@ module.exports = {
       blue: "#04d9ff",
       primaryColor: "#00040f",
       secondaryColor: "#00f6ff",
-      dimWhite: "rgba(255, 255, 255, 0.7)",
       secondaryColor_green: '#c2f70f',
+      primaryColor_orange: '#ff9f00',
       secondaryColor_orange: '#fe7a15',
     },
     fontFamily: {
