@@ -1,12 +1,6 @@
 import React from 'react'
+import { AppRoutes } from '../src/pages/landing-page/routes/routes';
 
-function App() {
-
-  return (
-      <div className="app">
-      app
-    </div>
-  )
+export const App = () => {
+  return <AppRoutes />
 }
-
-export default App

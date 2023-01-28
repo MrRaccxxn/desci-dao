@@ -5,18 +5,28 @@ module.exports = {
     extend: {
     colors: {
       white: 'white',
-      black: '#A7A7A7',
-      primaryColor_white: '#35bbca',
-      primaryColor_gray: '#0191b4',
-      primaryColor_beige: '#f8d90f',
-      secondaryColor_black: '#d30018',
-      secondaryColor_slate: '#fe7a15',
+      black: '#000',
+      primaryColor: "#00040f",
+      secondaryColor: "#00f6ff",
+      dimWhite: "rgba(255, 255, 255, 0.7)",
+      dimBlue: "rgba(9, 151, 124, 0.1)",
+      secondaryColor_green: '#d30018',
+      secondaryColor_orange: '#fe7a15',
     },
     fontFamily: {
       popins: ["Poppins", "sans-serif"],
       montserrat: ["Montserrat", "sans-serif"]
     }
   },
+  backgroundImage: (theme) => ({
+    "mobile-home": "url('./assets/HomePageGraphic.png')"
+  })
+},
+screens: {
+  xs: "480px",
+  ss: "620px",
+  sm: "768px",
+  md: "1060px",
 },
   plugins: [],
 };
