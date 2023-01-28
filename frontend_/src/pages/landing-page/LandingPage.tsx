@@ -1,10 +1,18 @@
 //import React from 'react'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
+import { useState } from 'react';
+import { SelectedPage } from './types/types';
 
 function LandingPage() {
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+    SelectedPage.Home
+    );
   return (
-    <div className="font-roboto grid grid-cols-1 grid-rows-10 h-screen">
-      <Navbar />
+    <div className="app">
+      <Navbar 
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
     </div>
   )
 }

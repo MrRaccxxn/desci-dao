@@ -10,7 +10,7 @@ module.exports = {
       secondaryColor: "#00f6ff",
       dimWhite: "rgba(255, 255, 255, 0.7)",
       dimBlue: "rgba(9, 151, 124, 0.1)",
-      secondaryColor_green: '#d30018',
+      secondaryColor_green: '#c2f70f',
       secondaryColor_orange: '#fe7a15',
     },
     fontFamily: {
