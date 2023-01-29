@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MintPage from './components/MintPage';
 import Features from './components/Features';
+import ReviewPapers from './components/ReviewPapers';
 import { useState, useEffect } from 'react';
 import { SelectedPage } from './types/types';
 
@@ -38,6 +39,10 @@ function LandingPage() {
       <Features
         setSelectedPage={setSelectedPage}
       />
+      <ReviewPapers
+        setSelectedPage={setSelectedPage}
+      />
+
     </div>
   )
 }

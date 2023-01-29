@@ -9,6 +9,8 @@ import {
   import Feature from './Feature';
   import { FeatureType } from '../types/types';
   import { SelectedPage } from "../../landing-page/types/types";
+  import useMediaQuery from "../../../hooks/useMediaQuery";
+  import { motion } from "framer-motion";
 
   
 type Props = {
@@ -39,16 +41,19 @@ type Props = {
   ]
   
   const Features = ({ setSelectedPage }: Props) =>  {
+    const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
     return (
       <div className="bg-yellow-50">
         <section id="features" className="py-10 md:pb-0 bg-primaryColor min-h-ful">
+        <motion.div className="mx-auto items-center"
+        onViewportEnter={() => setSelectedPage(SelectedPage.Features)}>
           {/* HEADER */}
           <div className="flex justify-center mx-90 -mb-10">
             <HeaderText>Features</HeaderText>
           </div>
   
           {/* FEATURES */}
-          <div className="ml-20 mb-5 py-20 mr-20 items-center justify-between md:flex">
+          <div className="ml-20 py-20 mr-20 items-center justify-between md:flex">
             {features.map((feature: FeatureType) => (
               <Feature
                 key={feature.name}
@@ -58,6 +63,7 @@ type Props = {
               />
             ))}
           </div>
+          </motion.div>
         </section>
       </div>
     )

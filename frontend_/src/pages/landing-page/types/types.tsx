@@ -2,7 +2,7 @@
 export enum SelectedPage {
     Home = "home",
     AboutUs = "aboutus",
-    UploadPaper = "uploadpaper",
+    ReviewPaper = "reviewpaper",
     Features = "features",
     FQA = "fqa",
     Grants = "grants",

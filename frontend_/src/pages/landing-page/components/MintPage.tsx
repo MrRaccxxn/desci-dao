@@ -18,7 +18,7 @@ const MintPage = ({ setSelectedPage }: Props) => {
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
         <div className="flex-1 flex justify-center items-start flex-col xl:px-0 sm:px-16 px-6">
         {/* LEFT */}
-        <div className="flex flex-row justify-between items-center w-full">
+        <div className="flex flex-row justify-between ml-20 mt-20 items-center w-full">
         <div className="team_card bg-green-gradient">
             <h1 className="font-poppins font-semibold text-lg">Upload Research Paper</h1>
             <div className="team_btn"><ActionBTN setSelectedPage={setSelectedPage }>Mint Page</ActionBTN></div>
@@ -27,7 +27,7 @@ const MintPage = ({ setSelectedPage }: Props) => {
 
         </div>
         {/* RIGHT */}
-        <div className="md:my-0 my-10 relative justify-center items-center flex flex-row w-full">
+        <div className="md:my-0 my-10 ml-40 relative justify-center items-center flex flex-row w-full">
         <div>
         <h1 className="vid_text font-poppins font-semibold text-x-lg text-white">How To Mint Page</h1>
         <div className="vid_container">
