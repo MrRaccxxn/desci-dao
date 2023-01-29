@@ -1,6 +1,7 @@
 /*Designed by Sandra Ashipala 28.01.2023 for FVM Hackathon https://linkedin.com/in/sandraashipala */
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Hero_2 from './components/MintPage';
 import { useState, useEffect } from 'react';
 import { SelectedPage } from './types/types';
 
@@ -28,6 +29,9 @@ function LandingPage() {
         setSelectedPage={setSelectedPage}
       />
       <Hero 
+        setSelectedPage={setSelectedPage}
+      />
+      <Hero_2 
         setSelectedPage={setSelectedPage}
       />
     </div>

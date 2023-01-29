@@ -16,7 +16,7 @@ const Hero = ({ setSelectedPage }: Props) => {
         <motion.div className="mx-auto w-5/6 items-center py-20 justify-center md:flex md:h-5/6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
             <div className="flex-1 flex justify-center items-start flex-col xl:px-0 sm:px-16 px-6">
-        <div className="flex flex-row justify-between itemscenter w-full">
+        <div className="flex flex-row justify-between items-center w-full">
             <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
             The Next <br className="sm:block hidden"/>
             {" "}  <span className="text-gradient">Generation</span>{" "}

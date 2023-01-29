@@ -5,8 +5,8 @@ module.exports = {
     extend: {
     colors: {
       white: 'white',
-      black: '#000',
       blue: "#04d9ff",
+      primary: "#191d26",
       primaryColor: "#00040f",
       secondaryColor: "#00f6ff",
       secondaryColor_green: '#c2f70f',
@@ -14,7 +14,7 @@ module.exports = {
       secondaryColor_orange: '#fe7a15',
     },
     fontFamily: {
-      popins: ["Poppins", "sans-serif"],
+      poppins: ["Poppins", "sans-serif"],
       montserrat: ["Montserrat", "sans-serif"]
     }
   },

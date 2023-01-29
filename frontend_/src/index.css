@@ -29,6 +29,68 @@ body,
   * {
     scroll-behavior: smooth;
   }
+
+  .vid_container{
+    display: flex;
+    justify-content: center;
+}
+
+.vid_card iframe{
+    height: 324px;
+    width: 525px;
+    border-radius: 5px;
+}
+
+.vid_text {
+  font-size: 32px;
+  justify-content: center;
+  text-align: center;
+}
+
+
+      .team_card{
+          margin: 6px;
+          height: 280px;
+          width: 420px;
+          border-radius: 4px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          color: #fff;
+          
+          transition: 0.3s ease-in;
+      }
+
+      .team_card h1{
+          text-align: center;
+          font-size: 20px;
+      }
+
+      .team_btn{
+          display: flex;
+          justify-content: center;
+          margin-top: 12px;
+          color: #000;
+      }
+
+      .team_card:hover{
+          transform: scale(1.075);
+          transition: 0.2s ease-in;
+          cursor: pointer;
+      }
+
+      .project_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 50%;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0 30px;
+    }
   
   .text-gradient {
     background: radial-gradient(
@@ -88,14 +150,6 @@ body,
     background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
   }
   
-  .box-shadow {
-    box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
-  }
-  
-  .sidebar {
-    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
   
   @-webkit-keyframes slide-top {
     0% {
