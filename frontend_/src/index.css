@@ -173,9 +173,13 @@ body,
     }
   }
   
-  .feature-card:hover {
+  .feature-card {
     background: var(--black-gradient);
     box-shadow: var(--card-shadow);
+  }
+
+  .feature-card:hover {
+    cursor: pointer;
   }
   
   .feedback-container .feedback-card:last-child {

@@ -4,7 +4,7 @@ import useMediaQuery from "../../../hooks/useMediaQuery";
 import { SelectedPage } from "../../landing-page/types/types";
 import { motion } from "framer-motion";
 import TrySoulSci from "./TrySoulSci";
-import robot from "../../../assets/robot_art.png"
+import robot from "../../../assets/images/robot_art.png"
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
