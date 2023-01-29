@@ -8,3 +8,9 @@ export enum SelectedPage {
     Grants = "grants",
     ContactUs = "contactus",
 }
+
+export interface FeatureType {
+    icon: JSX.Element
+    name: string
+    location: string
+  }

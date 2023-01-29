@@ -12,7 +12,7 @@ type Props = {
 const Hero = ({ setSelectedPage }: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
     return(
-        <section className="py-20 md:pb-0 bg-primaryColor ">
+        <section className="py-20 md:pb-0 bg-primaryColor">
         <motion.div className="mx-auto w-5/6 items-center py-20 justify-center md:flex md:h-5/6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
             <div className="flex-1 flex justify-center items-start flex-col xl:px-0 sm:px-16 px-6">

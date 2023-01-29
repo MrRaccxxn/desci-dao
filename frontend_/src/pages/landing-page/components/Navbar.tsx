@@ -22,7 +22,7 @@ const Navbar = ({selectedPage, isTopOfPage, setSelectedPage}: Props) => {
   return(  <nav>
        <div className={`${flexBetween} bg-secondaryColor_orange fixed top-0 z-30 w-full py-3`}>
             <div className={`${navbarBackground} ${flexBetween} mx-auto w-5/6`}>
-                <div className={`${flexBetween} w-full gap-16`}>
+                <div className={`${flexBetween} w-full gap-14`}>
                     {/*LEFT SIDE*/}
                     <img alt="logo" src={Logo} />
                     {/*RIGHT SIDE*/}
