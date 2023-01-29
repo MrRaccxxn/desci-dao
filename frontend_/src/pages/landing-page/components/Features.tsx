@@ -1,3 +1,4 @@
+/*Designed by Sandra Ashipala 28.01.2023 for FVM Hackathon https://linkedin.com/in/sandraashipala */
 //import React from 'react'
 import {
     CpuChipIcon,
@@ -21,22 +22,22 @@ type Props = {
     {
       icon: <AcademicCapIcon className="h-6 w-6" />,
       name: 'FEATURE 1',
-      location: 'lorem some text here',
+      details: 'lorem some text here',
     },
     {
        icon: <CpuChipIcon className="h-6 w-6" />,
        name: 'FEATURE 2',
-       location: 'lorem some text here',
+       details: 'lorem some text here',
       },
     {
       icon: <ClipboardDocumentIcon className="h-6 w-6" />,
       name: 'FEATURE 3',
-      location: 'lorem some text here',
+      details: 'lorem some text here',
     },
     {
       icon: <ComputerDesktopIcon className="h-6 w-6" />,
       name: 'FEATURE 4',
-      location: 'lorem some text here',
+      details: 'lorem some text here',
     },
   ]
   
@@ -59,7 +60,7 @@ type Props = {
                 key={feature.name}
                 icon={feature.icon}
                 name={feature.name}
-                location={feature.location}
+                details={feature.details}
               />
             ))}
           </div>

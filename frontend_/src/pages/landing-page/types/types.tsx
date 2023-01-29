@@ -12,5 +12,11 @@ export enum SelectedPage {
 export interface FeatureType {
     icon: JSX.Element
     name: string
-    location: string
+    details: string
+  }
+
+  export interface ReviewType {
+    icon: JSX.Element
+    step: string
+    description: string
   }

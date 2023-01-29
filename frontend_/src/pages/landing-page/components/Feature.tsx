@@ -1,15 +1,16 @@
+/*Designed by Sandra Ashipala 28.01.2023 for FVM Hackathon https://linkedin.com/in/sandraashipala */
 import React from 'react'
 
 type Props = {
   icon: JSX.Element
   name: string
-  location: string
+  details: string
 }
 
 const Feature = ({
   icon,
   name,
-  location,
+  details,
 }: Props) => {
   return (
     <div className="h-84 w-80 mt-5 rounded-md border-2 border-gray px-2 py-5 text-center">
@@ -21,7 +22,7 @@ const Feature = ({
       <div className="font-bold text-white">
         <h4>{name}</h4>
       </div>
-      <p className=" text-white">{location}</p>
+      <p className=" text-white">{details}</p>
     </div>
   )
 }
