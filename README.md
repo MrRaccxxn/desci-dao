@@ -1,5 +1,5 @@
-<!-- Designed by Sandra Ashipala 02.01.2023 https://github.com/sandramsc -->
-  <h1 align="center">SoulsSci</h1>
+<!-- Designed by Sandra Ashipala 29.01.2023 https://github.com/sandramsc -->
+  <h1 align="center">SoulSci</h1>
 
 ## Application Description
 
@@ -25,7 +25,7 @@ short app description
 
 ## Prototype
 
-[View Prototype](https://desci-dao.vercel.app/)
+[View Prototype](https://soulsci.vercel.app/)
 
 ## Screenshots
 
@@ -46,7 +46,7 @@ short app description
 
 ## Figma Wireframe
 
-[AppName wireframes](https://www.figma.com/)
+[SoulSci wireframes](https://www.figma.com/file/R9TIUkbzCOl3EObMVaFwkc/Soul-Sci?node-id=10%3A338&t=KvA7XHxSqaBe40qT-0)
 
 ## How to use the app
 
@@ -54,6 +54,11 @@ short app description
 
 ```bash
 $ git clone https://github.com/MrRaccxxn/desci-dao
+```
+**Step #2** - Access Landing Page
+
+```bash
+$ cd frontend
 ```
 
 **Step #2**

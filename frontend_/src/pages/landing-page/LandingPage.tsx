@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import MintPage from './components/MintPage';
 import Features from './components/Features';
 import ReviewPapers from './components/ReviewPapers';
+import AboutUs from './components/AboutUs';
 import { useState, useEffect } from 'react';
 import { SelectedPage } from './types/types';
 
@@ -40,6 +41,9 @@ function LandingPage() {
         setSelectedPage={setSelectedPage}
       />
       <ReviewPapers
+        setSelectedPage={setSelectedPage}
+      />
+       <AboutUs
         setSelectedPage={setSelectedPage}
       />
 

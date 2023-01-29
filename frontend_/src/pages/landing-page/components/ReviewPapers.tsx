@@ -14,7 +14,7 @@ type Props = {
 
   const reviews: Array<ReviewType> = [
     {
-      icon: <StarIcon className="h-6 w-6 secondaryColor_orange" />,
+      icon: <StarIcon className="h-6 w-6" />,
       step: 'STEP 1',
       description: 'hover your cursor here',
     },
@@ -40,7 +40,7 @@ const ReviewPapers = ({ setSelectedPage }: Props) => {
         <div className="ml-20 mr-20 flex-1 flex justify-center items-start flex-col">
             <h2 className="font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full">You do the writing, <br className="sm:block hidden"/>SoulSci will handle the rest.
             </h2>
-            <p className="font-poppins font-normal text-[18px] text-white leading-[30.8px] max-w-[470px] mt-5">Follow these few steps to get your paper peer-reviewed. Et natus molestiae qui temporibus deleniti ut numquam sapiente vel saepe pariatur ab internos error et perspiciatis animi ut minus atque.</p>
+            <p className="font-poppins font-normal text-[18px] text-white leading-[30.8px] max-w-[470px] mt-5">Follow these few steps to get your paper peer-reviewed. Then click "Learn More" find out how to peer-review other academic research papers.</p>
             <ActionBTN3 setSelectedPage={setSelectedPage}>LEARN MORE</ActionBTN3>
         </div>
         {/* RIGHT */}

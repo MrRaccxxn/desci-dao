@@ -48,37 +48,57 @@ body,
 }
 
 
-      .team_card{
-          margin: 6px;
-          height: 280px;
-          width: 420px;
-          border-radius: 4px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          color: #fff;
-          
-          transition: 0.3s ease-in;
-      }
+.team_wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
 
-      .team_card h1{
-          text-align: center;
-          font-size: 20px;
-      }
+.team_card{
+  margin: 6px;
+  height: 180px;
+  width: 280px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #00040f;
+  background-image: linear-gradient(to right, #00f6ff 0%, #fe7a15 100%);
+  transition: 0.3s ease-in;
+}
 
-      .team_btn{
-          display: flex;
-          justify-content: center;
-          margin-top: 12px;
-          color: #000;
-      }
+.team_card h2{
+  text-align: center;
+}
 
-      .team_card:hover{
-          transform: scale(1.075);
-          transition: 0.2s ease-in;
-          cursor: pointer;
-      }
+.team_btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
 
+.team_card button{
+  color: #000;
+  padding: 6px 20px;
+  outline: none;
+  border-radius: 4.7px;
+  background: #b1edff;
+}
+
+.team_card button:hover{
+  cursor: pointer;
+}
+
+.team_card:hover{
+  transform: scale(1.075);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+.bi-github {
+  display: inline-block;
+  vertical-align: -.125em;
+}
       .project_container{
         display: grid;
         grid-template-columns: 1fr 1fr;
