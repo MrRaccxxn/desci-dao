@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-   
+    daisyui: {
+      themes: [
+        'emerald'
+      ],
+    },
     screens: {
       'xl': { 'max': '1279px' },
       // => @media (max-width: 1279px) { ... }

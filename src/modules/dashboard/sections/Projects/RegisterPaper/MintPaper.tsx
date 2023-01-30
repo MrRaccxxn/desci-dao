@@ -1,3 +1,4 @@
+import { ProjectBox } from "@/modules/dashboard/components/ProjectBox"
 import { ProjectSectionContext } from "@/modules/dashboard/context/ProjectSectionContext"
 import { ProjectSectionContextInterface, ProjectSectionStateType } from "@/modules/dashboard/types/context/registerProjectFormContext"
 import { useContext } from "react"
@@ -19,10 +20,16 @@ export const MintPaper = () => {
                     </div>
 
                     <ul className="w-full steps steps-horizontal lg:steps-horizontal self-center">
-                        <li className="step step-primary">Upload Metadata</li>
-                        <li className="step step-primary">Mint</li>
+                        <li className="step step-secondary">Upload Metadata</li>
+                        <li className="step step-secondary">Mint</li>
                     </ul>
-                    <hr className="my-10" />
+
+                    <div className="flex flex-col items-center  w-full my-20">
+                        <h2 className="py-3 mb-3 text-xl font-semibold">Preview of your paper</h2>
+                        <div className="max-w-xl">
+                            <ProjectBox />
+                        </div>
+                    </div>
 
                     <button onClick={() => setProjectSectionState(ProjectSectionStateType.UploadMetadata)}>Back</button>
 

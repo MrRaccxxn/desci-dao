@@ -33,21 +33,26 @@ export const Input: React.FC<InputProps> = forwardRef<HTMLInputElement, InputPro
         ref
     ) => {
         return (
-            <input
-                id={id}
-                ref={ref}
-                name={name}
-                type={type}
-                aria-label={label}
-                placeholder={placeholder}
-                autoComplete='off'
-                className={classNames([
-                    'relative inline-flex w-full rounded leading-none transition-colors ease-in-out placeholder-gray-500 text-gray-700 bg-gray-50 border border-gray-300 hover:border-blue-400 focus:outline-none focus:border-blue-400 focus:ring-paragraph focus:ring-2 focus:ring-opacity-30',
-                    sizeMap[size],
-                    className,
-                ])}
-                {...props}
-            />
+            <div className="form-control w-full">
+                <label className="label">
+                    <span className="label-text">{label}</span>
+                </label>
+                <input
+                    id={id}
+                    ref={ref}
+                    name={name}
+                    type={type}
+                    aria-label={label}
+                    placeholder={placeholder}
+                    autoComplete='off'
+                    className={classNames([
+                        'bg-transparent input input-bordered w-full',
+                        sizeMap[size],
+                        className,
+                    ])}
+                    {...props}
+                />
+            </div>
         );
     }
 );
