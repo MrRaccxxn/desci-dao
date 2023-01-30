@@ -3,8 +3,8 @@ export interface IPaper {
     title: string;
     author: string;
     description: string;
-    paperFile: File[] | string;
-    thumbnail: File[] | string;
+    paperFile: any;
+    thumbnail: any;
     uploadDate: Date;
 }
 

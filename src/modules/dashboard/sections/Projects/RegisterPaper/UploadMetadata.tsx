@@ -8,7 +8,11 @@ import { useContext } from "react"
 import { FieldErrorsImpl, UseFormRegister } from "react-hook-form"
 
 export const UploadMetadata = ({ register, errors, onSubmit, isSubmitting }: { register: UseFormRegister<IPaperForm>, errors: Partial<FieldErrorsImpl<IPaperForm>>, onSubmit: () => void, isSubmitting: boolean }) => {
-    const { projectSectionState, setProjectSectionState } = useContext(ProjectSectionContext) as ProjectSectionContextInterface
+    const { paper, setPaper, projectSectionState, setProjectSectionState } = useContext(ProjectSectionContext) as ProjectSectionContextInterface
+
+    const updatePaperData = () => {
+        onSubmit()
+    }
 
     return <div className="ml-60 max-h-screen overflow-auto">
         <div className="px-6 py-8">
@@ -16,7 +20,6 @@ export const UploadMetadata = ({ register, errors, onSubmit, isSubmitting }: { r
                 <div className="bg-white rounded-3xl p-8 mb-5">
                     <div className="flex flex-row items-center justify-between">
                         <div className="text-sm breadcrumbs">
-
                             <ul>
                                 <li><a onClick={() => setProjectSectionState(ProjectSectionStateType.MyProjects)}>My Projects</a></li>
                                 <li>Add Paper</li>
@@ -45,14 +48,14 @@ export const UploadMetadata = ({ register, errors, onSubmit, isSubmitting }: { r
                         </div>
                         <div>
                             <FormInput<IPaperForm>
-                                id="title"
+                                id="author"
                                 type="text"
-                                name="title"
+                                name="author"
                                 label="Author Name *"
                                 placeholder="e.x. Vitalik Buterin"
                                 className="mb-2 w-full text-xl"
                                 register={register}
-                                rules={{ required: 'You must enter a title.' }}
+                                rules={{ required: 'You must enter an Author name.' }}
                                 errors={errors}
                             />
                         </div>
@@ -81,12 +84,12 @@ export const UploadMetadata = ({ register, errors, onSubmit, isSubmitting }: { r
                         </div>
 
                         <div className="flex flex-row gap-5 w-full justify-start">
-                            <DragAndDrop title={'Add your PDF *'} pdf={true} helperText={'PDF, Max. upload size : 100Mb'} memoryImage={''} register={register} inputName={'paperFile'} className={"w-96 h-72 m-0"} label={'PDF'} />
-                            <DragAndDrop title={'Upload thumbnail *'} helperText={'JPG or PNG, Max. upload size : 5Mb'} memoryImage={null} register={register} inputName={'thumbnail'} className={"w-96 h-72 m-0"} label={'thumbnail'} />
+                            <DragAndDrop title={'Add your PDF *'} pdf={true} helperText={'PDF, Max. upload size : 100Mb'} memoryImage={paper?.paperFile} register={register} inputName={'paperFile'} className={"w-96 h-72 m-0"} label={'PDF'} />
+                            <DragAndDrop title={'Upload thumbnail *'} helperText={'JPG or PNG, Max. upload size : 5Mb'} memoryImage={paper?.thumbnail} register={register} inputName={'thumbnail'} className={"w-96 h-72 m-0"} label={'thumbnail'} />
                         </div>
 
                         <div className="flex flex-row w-full justify-end pt-5">
-                            <button className="btn btn-secondary bg-secondary" onClick={() => setProjectSectionState(ProjectSectionStateType.Mint)}>Upload Metadata</button>
+                            <button className="btn btn-secondary bg-secondary" onClick={updatePaperData}>Upload Metadata</button>
                         </div>
                     </div>
                 </div>

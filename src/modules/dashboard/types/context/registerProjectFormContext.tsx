@@ -1,10 +1,10 @@
 
 import { Dispatch, SetStateAction } from "react";
-import { IPaper } from "../models/paper";
+import { IPaperForm } from "../models/paper";
 
 export interface ProjectSectionContextInterface {
-    paper: IPaper | null;
-    setPaper: Dispatch<SetStateAction<IPaper | null>>
+    paper: IPaperForm | null;
+    setPaper: Dispatch<SetStateAction<IPaperForm | null>>
     projectSectionState: ProjectSectionStateType;
     setProjectSectionState: Dispatch<SetStateAction<ProjectSectionStateType>>;
 }
