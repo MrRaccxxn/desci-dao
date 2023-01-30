@@ -1,10 +1,10 @@
 /*Designed by Sandra Ashipala 28.01.2023 for FVM Hackathon https://linkedin.com/in/sandraashipala */
 import React from 'react';
-import useMediaQuery from "../../../hooks/useMediaQuery";
+import useMediaQuery from "../../../../src/hooks/useMediaQuery";
 import { SelectedPage } from "../../landing-page/types/types";
 import { motion } from "framer-motion";
 import TrySoulSci from "./TrySoulSci";
-import robot from "../../../assets/images/robot_art.png"
+import robot from "../../../assets/robot_art.png"
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;

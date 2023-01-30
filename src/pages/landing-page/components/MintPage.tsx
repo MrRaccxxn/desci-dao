@@ -1,6 +1,6 @@
 /*Designed by Sandra Ashipala 28.01.2023 for FVM Hackathon https://linkedin.com/in/sandraashipala */
 import React from 'react';
-import useMediaQuery from "../../../hooks/useMediaQuery";
+import useMediaQuery from "../../../../src/hooks/useMediaQuery";
 import { SelectedPage } from "../types/types";
 import { motion } from "framer-motion";
 import ActionBTN from "../types/ActionBTN";
@@ -13,14 +13,14 @@ type Props = {
 const MintPage = ({ setSelectedPage }: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
     return(
-        <section className="py-18 md:pb-0 bg-primary ">
+        <section className="py-18 md:pb-0 bg-primary">
         <motion.div className="mx-auto w-5/6 items-center py-20 justify-center md:flex md:h-5/6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
         <div className="flex-1 flex justify-center items-start flex-col xl:px-0 sm:px-16 px-6">
         {/* LEFT */}
         <div className="flex flex-row justify-between ml-20 mt-20 items-center w-full">
-        <div className="team_card bg-green-gradient">
-            <h1 className="font-poppins font-semibold text-lg">Upload Research Paper</h1>
+        <div className="mint_card bg-green-gradient justify-center flex-col flex items-center">
+            <h1 className="font-poppins font-semibold text-2xl text-white fjustify-center">Upload Research Paper</h1>
             <div className="team_btn"><ActionBTN setSelectedPage={setSelectedPage }>Mint Page</ActionBTN></div>
         </div>
         </div>
@@ -31,7 +31,7 @@ const MintPage = ({ setSelectedPage }: Props) => {
         <div>
         <h1 className="vid_text font-poppins font-semibold text-x-lg text-white">How To Mint Page</h1>
         <div className="vid_container">
-        <div className="vid_card" id="card-2"><iframe src="http://youtube.com"></iframe></div>
+        <div className="vid_card" id="card-2"><iframe src="https://www.youtube.com/watch?v=KcZbXSoUxz4"></iframe></div>
         </div>
         </div>
         </div>

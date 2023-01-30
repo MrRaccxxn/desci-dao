@@ -67,6 +67,15 @@ body,
   transition: 0.3s ease-in;
 }
 
+.mint_card{
+
+  height: 280px;
+  width: 380px;
+  border-radius: 4px;
+
+  transition: 0.3s ease-in;
+}
+
 .team_card h2{
   text-align: center;
 }

@@ -15,18 +15,34 @@ module.exports = {
     },
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
-      montserrat: ["Montserrat", "sans-serif"]
-    }
+      montserrat: ["Montserrat", "sans-serif"],
+      sans: ['sans-serif'],
+      serif: ['serif'],
+    },
+    
   },
   backgroundImage: (theme) => ({
     "mobile-home": "url('./assets/HomePageGraphic.png')"
   })
 },
 screens: {
-  xs: "480px",
-  ss: "620px",
-  sm: "768px",
-  md: "1060px",
+  'xl': { 'max': '1279px' },
+  // => @media (max-width: 1279px) { ... }
+  'lg': { 'max': '1023px' },
+  // => @media (max-width: 1023px) { ... }
+  'md': { 'max': '767px' },
+  // => @media (max-width: 767px) { ... }
+  'sm': { 'max': '639px' },
+  // => @media (max-width: 639px) { ... }
 },
-  plugins: [],
+extend: {
+  spacing: {
+    128: '32rem',
+    144: '36rem',
+  },
+  borderRadius: {
+    '4xl': '2rem',
+  },
+},
+  plugins: [require("daisyui")],
 };

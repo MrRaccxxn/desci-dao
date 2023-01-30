@@ -3,7 +3,7 @@ import { StarIcon } from '@heroicons/react/24/solid';
 import { ReviewType } from '../types/types';
 import  Review  from './Review'
 import  ActionBTN3 from '../types/ActionBTN3';
-import useMediaQuery from "../../../hooks/useMediaQuery";
+import useMediaQuery from "../../../../src/hooks/useMediaQuery";
 import { SelectedPage } from "../../landing-page/types/types";
 import { motion } from "framer-motion";
 

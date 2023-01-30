@@ -1,7 +1,7 @@
 /*Designed by Sandra Ashipala 28.01.2023 for FVM Hackathon https://linkedin.com/in/sandraashipala */
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
-import Logo from '../../../assets/images/logo.png';
+import Logo from '../../../assets/logo.png';
 import Link from '../routes/Link';
 import { SelectedPage } from '../types/types';
 import useMediaQuery from '@/hooks/useMediaQuery';

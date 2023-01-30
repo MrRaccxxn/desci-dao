@@ -10,7 +10,7 @@ import {
   import Feature from './Feature';
   import { FeatureType } from '../types/types';
   import { SelectedPage } from "../../landing-page/types/types";
-  import useMediaQuery from "../../../hooks/useMediaQuery";
+  import useMediaQuery from "../../../../src/hooks/useMediaQuery";
   import { motion } from "framer-motion";
 
   
