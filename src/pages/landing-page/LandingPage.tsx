@@ -6,6 +6,7 @@ import Features from './components/Features';
 import ReviewPapers from './components/ReviewPapers';
 import AboutUs from './components/AboutUs';
 import FAQ from './components/Accordian';
+import Grants from './components/Grants';
 import { useState, useEffect } from 'react';
 import { SelectedPage } from './types/types';
 
@@ -50,7 +51,9 @@ function LandingPage() {
        <FAQ
         setSelectedPage={setSelectedPage}
       />
-
+     <Grants
+        setSelectedPage={setSelectedPage}
+      />
     </div>
   )
 }

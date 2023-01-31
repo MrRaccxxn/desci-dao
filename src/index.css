@@ -257,7 +257,7 @@ body,
   }
 
   .content{
-    color: #7efd53;
+    color: #000;
     max-height: 0;
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0,1,0,1);

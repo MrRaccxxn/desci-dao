@@ -1,15 +1,10 @@
 /*Designed by Sandra Ashipala 28.01.2023 for FVM Hackathon https://linkedin.com/in/sandraashipala */
 //import React from 'react'
 import { useState } from 'react'
-import {
-    PlusIcon,
-    MinusIcon,
-  } from '@heroicons/react/24/solid';
   import HeaderText from '../types/HeaderText';
   import { SelectedPage } from "../../landing-page/types/types";
   import useMediaQuery from "../../../../src/hooks/useMediaQuery";
   import { motion } from "framer-motion";
-import { isTemplateExpression } from 'typescript';
   
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
@@ -30,7 +25,7 @@ type Props = {
       description: 'lorem some text here, lorem some text here, lorem some text here, lorem some text here, lorem some text here, lorem some text here.',
     },
     {
-      title: 'HOW TO PEER REVIEW PAPERS',
+      title: 'How to peer review papers',
       description: 'lorem some text here, lorem some text here, lorem some text here, lorem some text here, lorem some text here, lorem some text here.',
     },
   ]
@@ -57,7 +52,7 @@ type Props = {
           {/* FEATURES */}
           <div className='w-90'>
           {data.map((item, i) => (
-            <div className="item bg-secondaryColor_orange ">
+            <div className="item bg-secondaryColor_orange w-90 ">
             <div className="title flex justify-between items-center cursor-pointer" onClick={() => toggle(i)}>
                 <h2>{item.title}</h2>
                 <span>{selected == i ? '-' : '+'}</span>

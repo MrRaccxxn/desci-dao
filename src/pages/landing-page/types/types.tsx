@@ -21,8 +21,7 @@ export interface FeatureType {
     description: string
   }
 
-  export interface AccordianType {
-    title: string
-    description: string
-    index: number;
+  export interface GrantType {
+    logo: HTMLImageElement
   }
+
