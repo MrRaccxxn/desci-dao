@@ -5,6 +5,7 @@ import MintPage from './components/MintPage';
 import Features from './components/Features';
 import ReviewPapers from './components/ReviewPapers';
 import AboutUs from './components/AboutUs';
+import FAQ from './components/Accordian';
 import { useState, useEffect } from 'react';
 import { SelectedPage } from './types/types';
 
@@ -44,6 +45,9 @@ function LandingPage() {
         setSelectedPage={setSelectedPage}
       />
        <AboutUs
+        setSelectedPage={setSelectedPage}
+      />
+       <FAQ
         setSelectedPage={setSelectedPage}
       />
 

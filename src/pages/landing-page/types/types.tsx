@@ -4,7 +4,7 @@ export enum SelectedPage {
     AboutUs = "aboutus",
     ReviewPaper = "reviewpaper",
     Features = "features",
-    FQA = "fqa",
+    FAQ = "faq",
     Grants = "grants",
     ContactUs = "contactus",
 }
@@ -19,4 +19,10 @@ export interface FeatureType {
     icon: JSX.Element
     step: string
     description: string
+  }
+
+  export interface AccordianType {
+    title: string
+    description: string
+    index: number;
   }

@@ -237,3 +237,34 @@ body,
     background: rgba(255, 255, 255, 0.6);
     filter: blur(750px);
   }
+
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+
+  .item {
+  
+    margin-bottom: 5px;
+    padding: 10px 20px;
+  }
+
+  .title {
+    color: #fff;
+  }
+
+  .content{
+    color: #7efd53;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0,1,0,1);
+  }
+
+  .content.show{
+    height: auto;
+    max-height: 999px;
+    transition: all 0.5s cubic-bezier(1,0,1,0);
+  }
