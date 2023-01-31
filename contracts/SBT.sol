@@ -1,28 +1,42 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import "@openzeppelin/contracts@4.8.1/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts@4.8.1/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts@4.8.1/access/Ownable.sol";
-import "@openzeppelin/contracts@4.8.1/utils/cryptography/draft-EIP712.sol";
-import "@openzeppelin/contracts@4.8.1/utils/Counters.sol";
+import "../node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "../node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "../node_modules/@openzeppelin/contracts/access/AccessControl.sol";
 
-contract MyToken is ERC721, ERC721URIStorage, Ownable, EIP712 {
-    using Counters for Counters.Counter;
 
-    Counters.Counter private _tokenIdCounter;
+contract SBT is ERC721, ERC721URIStorage, AccessControl {
+    bytes32 public constant SBT_OWNER = keccak256("SBT_OWNER");
+    bytes32 public constant EDITOR_ROLE = keccak256("EDITOR_ROLE");
 
-    constructor() ERC721("MyToken", "MTK") EIP712("MyToken", "1") {}
-
-    function _baseURI() internal pure override returns (string memory) {
-        return "https://www.SoulSci.com/";
+    constructor(
+        address owner,
+        address editor
+    ) ERC721("SoulSci", "SST") {
+        if(owner != address(0)){
+            //if ID SBT
+            _setupRole(SBT_OWNER, owner);
+            _setupRole(EDITOR_ROLE, editor);
+        }
     }
 
-    function safeMint(address to, string memory uri) public onlyOwner{
-        uint256 tokenId = _tokenIdCounter.current();
-        _tokenIdCounter.increment();
+    function _baseURI() internal pure override returns (string memory) {
+        return "https://gateway.lighthouse.storage/ipfs/";
+    }
+
+    function safeMint(address to, string memory uri, bool file) payable public onlyRole(EDITOR_ROLE) returns (uint256) {
+        if (file == false){
+            //create UserIDSBT
+            require(balanceOf(to) == 0, "Err: Only one ID per User");
+        } else {
+            //create FileSBT
+            require(hasRole(SBT_OWNER, msg.sender), "Err: Caller is not SBT owner");
+        }
+        uint256 tokenId = uint256(keccak256(abi.encodePacked(address(this), block.timestamp)));
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
+        return (tokenId);
     }
 
     // The following functions are overrides required by Solidity.
@@ -34,8 +48,17 @@ contract MyToken is ERC721, ERC721URIStorage, Ownable, EIP712 {
         super._afterTokenTransfer(from, to, tokenId, batchSize);
     }
 
-    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
+    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) onlyRole(EDITOR_ROLE){
         super._burn(tokenId);
+    }
+
+    function supportsInterface(bytes4 interfaceId)
+        public
+        view
+        override(ERC721, AccessControl)
+        returns (bool)
+    {
+        return super.supportsInterface(interfaceId);
     }
 
     //the following functions are required to override the transferability of ERC-721

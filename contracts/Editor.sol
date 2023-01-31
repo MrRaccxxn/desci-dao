@@ -1,23 +1,23 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
+import "./SBT.sol";
 
-import "../node_modules/@openzeppelin/contracts/access/AccessControl.sol";
-import "./UserSBT.sol";
-import "./FileSBT.sol";
+contract Editor{
+    mapping(address => uint256[]) internal _sbts;
 
-abstract contract Editor is AccessControl{
-  
   function createPaper(string memory uri) external returns (address) {
-    FileSBT Paper = new FileSBT();
-    Paper.safeMint(msg.sender, uri);
+    SBT Paper = new SBT(address(0), address(this));
+    //use address to check if address has more than one SBT, if address has non-zero amount of contracts
+    //that means if the address has at least one contract then it must be an ID SBT therefore we can mint a file
+    _sbts[msg.sender].push(Paper.safeMint(msg.sender, uri, true));
     return address (Paper);
   }
 
-  //mapping(address => SBT[]) internal _userCollection;
-  //mapping(string => address) internal _paperCollection;
   function createID(string memory uri) external returns (address) {
-  UserSBT ID = new UserSBT(msg.sender, address(this));
-  ID.safeMint(msg.sender, uri);
-  return address( ID );
-}
+    SBT ID = new SBT(msg.sender, address(this));
+    //Use mapping to check if address has more than one SBT, if address has non-zero amount of contracts
+    //that means it at least has an ID SBT, therefore we cannot mint another Id
+    _sbts[msg.sender].push(ID.safeMint(msg.sender, uri, false));
+    return address( ID );
+  }
 }
