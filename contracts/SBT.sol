@@ -1,38 +1,28 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import "../node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "../node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import "../node_modules/@openzeppelin/contracts/access/AccessControl.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/access/AccessControl.sol";
 
+import "hardhat/console.sol";
 
 contract SBT is ERC721, ERC721URIStorage, AccessControl {
-    bytes32 public constant SBT_OWNER = keccak256("SBT_OWNER");
     bytes32 public constant EDITOR_ROLE = keccak256("EDITOR_ROLE");
+    uint8 public sbt_type;// 1 is ID, 0 is File
 
     constructor(
-        address owner,
         address editor
     ) ERC721("SoulSci", "SST") {
-        if(owner != address(0)){
-            //if ID SBT
-            _setupRole(SBT_OWNER, owner);
-            _setupRole(EDITOR_ROLE, editor);
-        }
+        _setupRole(EDITOR_ROLE, editor);
     }
 
     function _baseURI() internal pure override returns (string memory) {
         return "https://gateway.lighthouse.storage/ipfs/";
     }
 
-    function safeMint(address to, string memory uri, bool file) payable public onlyRole(EDITOR_ROLE) returns (uint256) {
-        if (file == false){
-            //create UserIDSBT
-            require(balanceOf(to) == 0, "Err: Only one ID per User");
-        } else {
-            //create FileSBT
-            require(hasRole(SBT_OWNER, msg.sender), "Err: Caller is not SBT owner");
-        }
+    function safeMint(address to, string memory uri, uint8 _type) public onlyRole(EDITOR_ROLE) returns (uint256) {
+        sbt_type = _type;
         uint256 tokenId = uint256(keccak256(abi.encodePacked(address(this), block.timestamp)));
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
