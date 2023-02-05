@@ -1,6 +1,6 @@
 import _ from "lodash";
 import Image from "next/image";
-import logo from "../../../assets/images/logo.png";
+import logo from "../../../public/assets/logo.png";
 import Link from "next/link";
 import { useAccount, useDisconnect } from 'wagmi'
 import { ConnectWallet } from "../components/ConnectWallet";
@@ -8,7 +8,7 @@ import ClientRehydration from "../utils/ClientRehydration";
 
 export const NavBar = () => {
     return <ClientRehydration>
-	<header className="sticky top-0 z-50 py-2 bg-base-100">
+	<header className="sticky top-0 z-50 py-2">
 	<div className="container">
       <div className="navbar px-0">
   <div className="navbar-start">
@@ -17,7 +17,9 @@ export const NavBar = () => {
         <i className="bi bi-list text-2xl"></i>
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-1 p-2 shadow bg-base-200 rounded-box w-52">
+      <button className="inline-flex text-white bg-primary_green border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
         <li><a>CREATE ID SET</a></li>
+        </button>
         <li tabIndex={0}>
           <a className="justify-between">
             PDF DAO
@@ -32,7 +34,14 @@ export const NavBar = () => {
         <li><a>VIEW ONCHAINPDF FILES</a></li>
       </ul>
     </div>
-    <a><Image src={logo} alt="logo" className="max-w-[65px] h-[65px]" /></a>
+    <Link href={'/'} className="btn btn-ghost normal-case text-xl">
+                    <Image
+                        alt="logo"
+                        width={36}
+                        height={36}
+                        src={logo}
+                    />
+                </Link>
   </div>
   <div className="navbar-center hidden xl:flex">
     <ul className="menu menu-horizontal p-0 font-medium">

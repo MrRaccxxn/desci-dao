@@ -4,7 +4,7 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-	  container: {
+    container: {
 		  center:true,
 		  paddind: '1.25rem'
 	  },
@@ -24,7 +24,7 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
     },
     fontFamily: {
-      sans: ['Montserrat','sans-serif'],
+      sans: ['Graphik', 'sans-serif'],
       serif: ['serif'],
     },
     extend: {

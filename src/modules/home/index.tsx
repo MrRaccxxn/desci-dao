@@ -6,19 +6,19 @@ import { Team } from "./sections/Team";
 import { CreateCredential } from "./sections/CreateCredential";
 import { AcceptPDFs } from "./sections/AcceptPDFs";
 import { ViewProposals } from "./sections/ViewProposals";
-import { Teams } from "./sections/Teams";
 import { Footer } from "./sections/Footer";
+import { FrequentAskedQuestions } from "./sections/FrequentAskedQuestions";
 
 export const Home = () => {
     return <ContainerX>
         <Hero />
         <ProductDescription />
         <Team />
+        <FrequentAskedQuestions />
 
         <CreateCredential />
         <AcceptPDFs />
         <ViewProposals />
-        <Teams />
         <Footer />
     </ContainerX>
 }
