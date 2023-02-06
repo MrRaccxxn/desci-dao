@@ -22,6 +22,10 @@ short app description
 - [License](#license)
 
 </details>
+ 
+## Demo
+
+[View Demo Video](https://www.loom.com/share/20d2c4d2425f4d4dbab6cb80e69936e8)
 
 ## Prototype
 
