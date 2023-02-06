@@ -11,14 +11,13 @@ import { FrequentAskedQuestions } from "./sections/FrequentAskedQuestions";
 
 export const Home = () => {
     return <ContainerX>
+        <CreateCredential />
         <Hero />
+        <ViewProposals />
         <ProductDescription />
         <Team />
         <FrequentAskedQuestions />
-
-        <CreateCredential />
         <AcceptPDFs />
-        <ViewProposals />
         <Footer />
     </ContainerX>
 }
