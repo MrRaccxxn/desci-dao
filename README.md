@@ -25,7 +25,7 @@ short app description
 
 ## Prototype
 
-[View Prototype](soulsci.vercel.app/)
+[View Prototype](https://soulsci.vercel.app/)
 
 ## Screenshots
 
