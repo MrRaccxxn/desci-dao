@@ -10,13 +10,13 @@ export const Footer = () => {
               <a href="#!" className="link link-hover">Team</a>
             </div>
             <div>
-              <span className="footer-title text-md">Services</span>
+              <span className="footer-title text-lg">Services</span>
               <a href="#!" className="link link-hover">Create ID SBT</a>
               <a href="#!" className="link link-hover">PDF DAO</a>
               <a href="#!" className="link link-hover">View Onchain PDF Files</a>
             </div>
             <div>
-              <span className="footer-title text-md">Legal</span>
+              <span className="footer-title text-base">Legal</span>
               <a href="#!" className="link link-hover">Terms of use</a>
               <a href="#!" className="link link-hover">Privacy policy</a>
               <a href="#!" className="link link-hover">Cookie policy</a>
@@ -28,10 +28,10 @@ export const Footer = () => {
               <p>© 2023 SoulSci, All rights reserved.</p>
             </div>
             <div className="grid grid-flow-col gap-4">
-              <a className='link link-green-400' href='#!'><i className='bi bi-facebook text-xl'></i></a>
-              <a className='link link-green-400' href='#!'><i className='bi bi-instagram text-xl'></i></a>
-              <a className='link link-green-400' href='#!'><i className='bi bi-twitter text-xl'></i></a>
-              <a className='link link-green-400' href='#!'><i className='bi bi-github text-xl'></i></a>
+              <a className='link link-success' href='#!'><i className='bi bi-facebook text-xl'></i></a>
+              <a className='link link-success' href='#!'><i className='bi bi-instagram text-xl'></i></a>
+              <a className='link link-success' href='#!'><i className='bi bi-twitter text-xl'></i></a>
+              <a className='link link-success' href='#!'><i className='bi bi-github text-xl'></i></a>
             </div>
           </div>
         </div>
