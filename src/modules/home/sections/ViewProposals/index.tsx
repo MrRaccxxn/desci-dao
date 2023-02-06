@@ -7,20 +7,20 @@ export const ViewProposals = () => {
                 <Image
                     alt="ViewProposals"
                     src={'/assets/illustrations/hero.png'}
-                    width={540}
-                    height={540}
+                    width={440}
+                    height={440}
                 />
             </div>
             <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-start text-start justify-start">
-                <h1 className="font-bold">
+                <h2 className="font-bold">
                 Vote and Manage DAO Together
-                </h1>
+                </h2>
                 <p className="mb-8 leading-relaxed pt-3 text-lg text-gray-500">
                 Once you create your credential token, you could vote for the proposal 
                 PDFs you believe is worth storing and preserving for the future.
                 </p>
                 <div className="flex justify-center">
-                    <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Create my token</button>
+                    <button className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-300 rounded text-lg">VIEW PROPOSALS</button>
                 </div>
             </div>
          
