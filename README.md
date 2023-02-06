@@ -15,6 +15,7 @@ a web tool that enables users to reate an identity token to securely identify th
 
 - [Application Description](#application-description)
 - [Table of Contents](#table-of-contents)
+- [Demo](#demo)
 - [Prototype](#prototype)
 - [Screenshots](#screenshots)
 - [Figma Wireframe](#figma-wireframe)
