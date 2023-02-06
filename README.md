@@ -3,7 +3,7 @@
 
 ## Application Description
 
-short app description
+a web tool that enables users to reate an identity token to securely identify themselves, protect important documents, and keep them organized and accessible.
 
 ## Table of Contents
 
