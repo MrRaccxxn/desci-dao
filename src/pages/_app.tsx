@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import { wagmiInstance } from '@/common/core/clients/wagmi'
 import type { AppProps } from 'next/app'
 import { WagmiConfig } from 'wagmi'

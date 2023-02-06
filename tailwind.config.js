@@ -4,6 +4,10 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+		  center:true,
+		  paddind: '1.25rem'
+	  },
     daisyui: {
       themes: [
         'emerald'
@@ -32,14 +36,12 @@ module.exports = {
         '4xl': '2rem',
       },
       colors: {
-        white: '#fff',
-        blue: "#04d9ff",
-        primary: "#191d26",
-        primaryColor: "#00040f",
-        secondaryColor: "#00f6ff",
-        secondaryColor_green: '#c2f70f',
-        primaryColor_orange: '#ff9f00',
-        secondaryColor_orange: '#fe7a15',
+		white:"#ffffff",
+        primary: "#333C4D",
+		primary_blue: "#C9ECF6",
+        primary_green: "#66CCBA",
+        primary_white: "#FAF9F6",
+        secondary_blue: "#3ABFF8",
       },
     },
     extend: {},
