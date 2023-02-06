@@ -29,7 +29,7 @@ a public library platform with decentralized storage for users, using lighthouse
  
 ## Demo
 
-[View Demo Video](https://www.loom.com/share/20d2c4d2425f4d4dbab6cb80e69936e8)
+[View Demo Video](https://www.loom.com/share/7dca52e82a49423e9df5a8a7064d813f)
 
 ## Prototype
 
