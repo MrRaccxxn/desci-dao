@@ -39,7 +39,13 @@ short app description
 | Technology                                                    | Description                                                          |
 | ------------------------------------------------------------- | -------------------------------------------------------------------- |
 | TypeScript                                                      | TypeScript is a free and open source programming language developed and maintained by Microsoft. |
+| TailwindCSS                                                      | design system implementation in pure CSS                                                   |
 | React.js                                                      | javaScript library                                                   |
+| Next.js                                                      | open-source web development framework created by Vercel              |
+| Wagmi                                                      | wagmi.bio is a one stop gateway for receiving payments in crypto    |
+| Node.js                                                      |  a cross-platform, open-source server environment    |
+| MongoDB                                                      | a source-available cross-platform document-oriented database program     |
+| Lighthouse                                                      | a permanent decentralized file storage protocol|
 
 
 ## Features
