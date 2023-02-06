@@ -1,5 +1,5 @@
-<!-- Designed for nanoGiants 12.2022 hackathon -->
-  <h1 align="center">AppName</h1>
+<!-- Designed for ETHGlobal hackathon 02.2023-->
+  <h1 align="center">SoulSci</h1>
 
 ## Application Description
 
@@ -8,7 +8,7 @@ short app description
 ## Table of Contents
 
 <details>
-<summary>AppName</summary>
+<summary>SoulSci</summary>
 
 - [Application Description](#application-description)
 - [Table of Contents](#table-of-contents)
@@ -46,7 +46,7 @@ short app description
 
 ## Figma Wireframe
 
-[AppName wireframes](https://www.figma.com/)
+[SoulSci wireframes](https://www.figma.com/file/R9TIUkbzCOl3EObMVaFwkc/Soul-Sci?node-id=0%3A1)
 
 ## How to use the app
 
@@ -60,19 +60,14 @@ $ git clone https://github.com/MrRaccxxn/desci-dao
 
 - Install dependencies: `npm i` OR `yarn`
 
-- To start the webapp, run: `npm start` OR `yarn start`
-
 **Step #3**
 
+- To build the webapp, run: `npm build` OR `yarn build`
+
+**Step #4**
+
+- To start the webapp, run: `npm start` OR `yarn start`
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 
 
