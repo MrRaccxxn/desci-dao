@@ -32,7 +32,7 @@ short app description
 [View Prototype](https://soulsci.vercel.app/)
 
 ## Screenshots
-
+![landing](https://user-images.githubusercontent.com/19821445/216965945-0d11012d-d4d8-4e75-a0dd-cab49441e7f1.PNG)
 
 ## Technology Stack
 
