@@ -25,7 +25,7 @@ short app description
 
 ## Prototype
 
-[View Prototype](https://desci-dao.vercel.app/)
+[View Prototype](soulsci.vercel.app/)
 
 ## Screenshots
 
