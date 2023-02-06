@@ -55,8 +55,8 @@ a public library platform with decentralized storage for users, using lighthouse
 
 ## Features
 
-- feature_one
-- feature_two
+- Enables users to create an identity token to securely identify themselves
+- Enables users to protect important documents, and keep them organized and accessible
 
 
 ## Figma Wireframe
