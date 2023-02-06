@@ -1,5 +1,8 @@
 <!-- Designed for ETHGlobal hackathon 02.2023-->
   <h1 align="center">SoulSci</h1>
+  <div id="header" align="center">
+  <img src="https://raw.githubusercontent.com/MrRaccxxn/desci-dao/main/public/assets/logo.png" width="250"/>
+</div>
 
 ## Application Description
 
