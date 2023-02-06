@@ -6,7 +6,7 @@
 
 ## Application Description
 
-a web tool that enables users to reate an identity token to securely identify themselves, protect important documents, and keep them organized and accessible.
+a public library platform with decentralized storage for users, using lighthouse.
 
 ## Table of Contents
 
@@ -93,7 +93,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 | Ayrton Paredes | https://github.com/MrRaccxxn |
 | Adarsh Chandran | https://github.com/adarshsc2000 |
 | Sandra Ashipala | https://github.com/sandramsc |
-| Joseph Mello | your_social_link |
+| Joseph Mello | https://github.com/Melloj650 |
 | Yuichi Okuhama |  https://github.com/yuichi-9621 |
 
 ## License
